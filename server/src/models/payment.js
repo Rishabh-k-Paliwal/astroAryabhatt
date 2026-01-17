@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const paymntSchema = new monogoose.Schema({
+const paymentSchema = new mongoose.Schema({
     razorpayOrderId:String,
     razorayPaymentId:String,
     razorpaySignature:String,

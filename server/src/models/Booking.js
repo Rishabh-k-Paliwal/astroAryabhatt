@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const bookingSchema = new mongoose.Schema({
-    name:string,
+    name: String,
     phone: String,
-    eail:String,
+    email:String,
     language:{
         type:String,
         enum:["hi","en"],

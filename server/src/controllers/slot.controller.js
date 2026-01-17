@@ -1,5 +1,5 @@
-import Slot from "../models/Slot";
-import Campaign from "../models/Campaign";
+import Slot from "../models/Slot.js";
+import Campaign from "../models/Campaign.js";
 
 export const getAvailableSlots = async(req,res)=>{
     try{
@@ -10,7 +10,7 @@ export const getAvailableSlots = async(req,res)=>{
 
         }
 
-        const slots = await slot.find({
+        const slots = await Slot.find({
             date,
             mode,
             isBooked:false
