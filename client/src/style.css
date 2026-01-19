@@ -1,0 +1,153 @@
+:root {
+  --bg-dark: #0b1020;
+  --bg-surface: #f6f5f2;
+  --text-dark: #1c1c1c;
+  --accent-gold: #c8a951;
+  --accent-purple: #4b3f72;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+h1, h2, h3 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+
+p {
+  line-height: 1.7;
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+
+h1 {
+  font-size: 42px;
+  letter-spacing: -0.3px;
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: -0.2px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+.section-surface p {
+  color: #333;
+}
+
+.section-dark p {
+  color: #d0d0d0;
+}
+/* ---------- GLOBAL CONTAINERS ---------- */
+
+.section-dark {
+  background: var(--bg-dark);
+  padding: 80px 20px;
+}
+
+.section-surface {
+  background: var(--bg-surface);
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn-primary {
+  background: transparent;
+  border: 2px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-primary:hover {
+  background: var(--accent-gold);
+  color: var(--bg-dark);
+  transform: translateY(-2px);
+}
+
+/* -----------Header-----------*/
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #f6f5f2;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: #0b1020;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+@media (max-width: 900px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .section-dark,
+  .section-surface {
+    padding: 56px 0;
+  }
+}

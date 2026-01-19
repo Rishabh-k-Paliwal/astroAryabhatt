@@ -27,7 +27,7 @@ const bookingSchema = new mongoose.Schema({
         enum:["PENDING","CONFIRMED","COMPLETED","CANCELLED"],
         default:"PENDING"
     },
-    paaymentId:{
+    paymentId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Payment",
         default:null

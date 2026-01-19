@@ -1,5 +1,5 @@
-  import Booking from "../models/Booking.js";
-import Slot from "../models/payment.js";
+import Booking from "../models/Booking.js";
+import Slot from "../models/Slot.js";
 import Payment from "../models/payment.js";
 
 export const createBooking = async(req,res)=>{
@@ -10,7 +10,7 @@ export const createBooking = async(req,res)=>{
             email,
             language,
             service,
-            module,
+            mode,
             slotId
         } =  req.body;
         const slot = await Slot.findById(slotId);

@@ -17,7 +17,7 @@ const slotSchema = new mongoose.Schema({
         type:Boolean,
         default:false
     },
-    boolingId:{
+    bookingId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Booking",
         default:null
